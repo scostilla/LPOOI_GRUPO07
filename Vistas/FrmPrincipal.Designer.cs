@@ -30,20 +30,20 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.altaDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.altaDePeriodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.altaDeDireccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPeriodos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDestinos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPrestamos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNuevoPrestamo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegistroPrestamo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sistemaToolStripMenuItem,
-            this.aBMToolStripMenuItem});
+            this.sistemaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(284, 24);
@@ -53,55 +53,61 @@
             // sistemaToolStripMenuItem
             // 
             this.sistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.altaDeClientesToolStripMenuItem,
-            this.altaDePeriodosToolStripMenuItem,
-            this.altaDeDireccionToolStripMenuItem});
+            this.mnuClientes,
+            this.mnuPeriodos,
+            this.mnuDestinos,
+            this.mnuUsuarios,
+            this.mnuPrestamos});
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
-            // altaDeClientesToolStripMenuItem
+            // mnuClientes
             // 
-            this.altaDeClientesToolStripMenuItem.Name = "altaDeClientesToolStripMenuItem";
-            this.altaDeClientesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.altaDeClientesToolStripMenuItem.Text = "Alta de Clientes";
-            this.altaDeClientesToolStripMenuItem.Click += new System.EventHandler(this.altaDeClientesToolStripMenuItem_Click);
+            this.mnuClientes.Name = "mnuClientes";
+            this.mnuClientes.Size = new System.Drawing.Size(152, 22);
+            this.mnuClientes.Text = "Clientes";
             // 
-            // altaDePeriodosToolStripMenuItem
+            // mnuPeriodos
             // 
-            this.altaDePeriodosToolStripMenuItem.Name = "altaDePeriodosToolStripMenuItem";
-            this.altaDePeriodosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.altaDePeriodosToolStripMenuItem.Text = "Alta de Periodos";
-            this.altaDePeriodosToolStripMenuItem.Click += new System.EventHandler(this.altaDePeriodosToolStripMenuItem_Click);
+            this.mnuPeriodos.Name = "mnuPeriodos";
+            this.mnuPeriodos.Size = new System.Drawing.Size(156, 22);
+            this.mnuPeriodos.Text = "Periodos";
             // 
-            // altaDeDireccionToolStripMenuItem
+            // mnuDestinos
             // 
-            this.altaDeDireccionToolStripMenuItem.Name = "altaDeDireccionToolStripMenuItem";
-            this.altaDeDireccionToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.altaDeDireccionToolStripMenuItem.Text = "Alta de Destinos";
-            this.altaDeDireccionToolStripMenuItem.Click += new System.EventHandler(this.altaDeDireccionToolStripMenuItem_Click);
+            this.mnuDestinos.Name = "mnuDestinos";
+            this.mnuDestinos.Size = new System.Drawing.Size(156, 22);
+            this.mnuDestinos.Text = "Destinos";
             // 
-            // aBMToolStripMenuItem
+            // mnuUsuarios
             // 
-            this.aBMToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultasToolStripMenuItem,
-            this.consutasToolStripMenuItem});
-            this.aBMToolStripMenuItem.Name = "aBMToolStripMenuItem";
-            this.aBMToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
-            this.aBMToolStripMenuItem.Text = "Gestion de Usuarios";
+            this.mnuUsuarios.Name = "mnuUsuarios";
+            this.mnuUsuarios.Size = new System.Drawing.Size(160, 22);
+            this.mnuUsuarios.Text = "Usuarios";
+            this.mnuUsuarios.Click += new System.EventHandler(this.mnuUsuarios_Click);
             // 
-            // consultasToolStripMenuItem
+            // mnuPrestamos
             // 
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.consultasToolStripMenuItem.Text = "Agregar";
-            this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
+            this.mnuPrestamos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuNuevoPrestamo,
+            this.mnuRegistroPrestamo});
+            this.mnuPrestamos.Name = "mnuPrestamos";
+            this.mnuPrestamos.Size = new System.Drawing.Size(160, 22);
+            this.mnuPrestamos.Text = "Prestamos";
             // 
-            // consutasToolStripMenuItem
+            // mnuNuevoPrestamo
             // 
-            this.consutasToolStripMenuItem.Name = "consutasToolStripMenuItem";
-            this.consutasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.consutasToolStripMenuItem.Text = "Consutas";
+            this.mnuNuevoPrestamo.Name = "mnuNuevoPrestamo";
+            this.mnuNuevoPrestamo.Size = new System.Drawing.Size(152, 22);
+            this.mnuNuevoPrestamo.Text = "Nuevo";
+            this.mnuNuevoPrestamo.Click += new System.EventHandler(this.mnuNuevoPrestamo_Click);
+            // 
+            // mnuRegistroPrestamo
+            // 
+            this.mnuRegistroPrestamo.Name = "mnuRegistroPrestamo";
+            this.mnuRegistroPrestamo.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegistroPrestamo.Text = "Registro";
             // 
             // FrmPrincipal
             // 
@@ -112,6 +118,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmPrincipal";
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -123,11 +131,12 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem altaDeClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem altaDePeriodosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem altaDeDireccionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aBMToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consutasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuClientes;
+        private System.Windows.Forms.ToolStripMenuItem mnuPeriodos;
+        private System.Windows.Forms.ToolStripMenuItem mnuDestinos;
+        private System.Windows.Forms.ToolStripMenuItem mnuUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem mnuPrestamos;
+        private System.Windows.Forms.ToolStripMenuItem mnuNuevoPrestamo;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegistroPrestamo;
     }
 }

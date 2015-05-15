@@ -7,37 +7,62 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using ClasesBase;
 namespace Vistas
 {
     public partial class FrmPrincipal : Form
     {
+        public Usuario usuarioActual { get; set; }
+
         public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-        private void altaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            FrmClientesAlta ofrmClientesAlta = new FrmClientesAlta();
-            ofrmClientesAlta.Show();
+            Rol oRol = TrabajarRoles.TraerRol(usuarioActual.RolCodigo);
+            switch (oRol.RolDescripcion)
+            {
+                case "Administrador":
+                    mnuClientes.Enabled=false;
+                    mnuDestinos.Enabled = true;
+                    mnuPeriodos.Enabled = true;
+                    mnuUsuarios.Enabled = true;
+                    mnuPrestamos.Enabled = false;
+                    break;
+                case "Operador":
+                    mnuClientes.Enabled = true;
+                    mnuDestinos.Enabled = false;
+                    mnuPeriodos.Enabled = false;
+                    mnuUsuarios.Enabled = false;
+                    mnuPrestamos.Enabled = true;
+
+                    break;
+                case "Auditor":
+                    mnuClientes.Enabled = true;
+                    mnuDestinos.Enabled = true;
+                    mnuPeriodos.Enabled = true;
+                    mnuUsuarios.Enabled = true;
+                    mnuPrestamos.Enabled = true;
+                    break;
+                default:
+                    break;
+            }
         }
 
-        private void altaDePeriodosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuUsuarios_Click(object sender, EventArgs e)
         {
-            FrmPeriodosAlta ofrmPeriodosAlta = new FrmPeriodosAlta();
-            ofrmPeriodosAlta.Show();
+            FrmUsuarios oFrmUsuarios = new FrmUsuarios();
+            oFrmUsuarios.Show();
         }
 
-        private void altaDeDireccionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuNuevoPrestamo_Click(object sender, EventArgs e)
         {
-            FrmDestinosAlta ofrmDestinosAlta = new FrmDestinosAlta();
-            ofrmDestinosAlta.Show();
+            FrmPrestamos oFrmPrestamos = new FrmPrestamos();
+            oFrmPrestamos.Show();
         }
 
-        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmUsuarioAlta ofrmAgregarUsuario = new FrmUsuarioAlta();
-            ofrmAgregarUsuario.Show();
-        }
     }
 }

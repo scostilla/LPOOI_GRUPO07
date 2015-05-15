@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
+using ClasesBase;
 namespace Vistas
 {
     static class Program
@@ -16,13 +17,15 @@ namespace Vistas
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FrmLogin());
-
+            
             FrmLogin ofrmLogin = new FrmLogin();
             ofrmLogin.ShowDialog();
-
+            
             if (ofrmLogin.DialogResult == DialogResult.OK)
             {
-                Application.Run(new FrmPrincipal());
+                FrmPrincipal oFrmPrincipal = new FrmPrincipal();
+                oFrmPrincipal.usuarioActual = ofrmLogin.usuarioActual;
+                Application.Run(oFrmPrincipal);
             }
             else
             {

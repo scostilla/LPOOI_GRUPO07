@@ -34,7 +34,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.cmbRol = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -42,7 +41,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblUsuario.Location = new System.Drawing.Point(22, 25);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(57, 17);
@@ -62,7 +61,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblPassword.Location = new System.Drawing.Point(22, 72);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(69, 17);
@@ -104,21 +103,11 @@
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             this.btnSalir.MouseHover += new System.EventHandler(this.btnSalir_MouseHover);
             // 
-            // cmbRol
-            // 
-            this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Location = new System.Drawing.Point(77, 178);
-            this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(121, 21);
-            this.cmbRol.TabIndex = 6;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Vistas.Properties.Resources.fondologin;
-            this.ClientSize = new System.Drawing.Size(312, 211);
-            this.Controls.Add(this.cmbRol);
+            this.ClientSize = new System.Drawing.Size(312, 161);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtPassword);
@@ -141,7 +130,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ComboBox cmbRol;
     }
 }
 

@@ -48,12 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmUsuarioAlta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmUsuarioAlta.Designer.cs">
-      <DependentUpon>FrmUsuarioAlta.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmClientesAlta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,18 +72,32 @@
     <Compile Include="FrmPeriodosAlta.Designer.cs">
       <DependentUpon>FrmPeriodosAlta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrestamos.Designer.cs">
+      <DependentUpon>FrmPrestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUsuarioAltaModificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarioAltaModificacion.Designer.cs">
+      <DependentUpon>FrmUsuarioAltaModificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmUsuarioAlta.resx">
-      <DependentUpon>FrmUsuarioAlta.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmClientesAlta.resx">
       <DependentUpon>FrmClientesAlta.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -106,8 +114,20 @@
       <DependentUpon>FrmPeriodosAlta.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamos.resx">
+      <DependentUpon>FrmPrestamos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarioAltaModificacion.resx">
+      <DependentUpon>FrmUsuarioAltaModificacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
